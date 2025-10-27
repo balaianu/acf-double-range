@@ -1,11 +1,15 @@
 <?php
 /**
  * Plugin Name: ACF Double Range Field
- * Description: Adds a min–max (double) range slider field type to ACF (ACF 6+ & Gutenberg-safe).
+ * Description: Adds a double (min/max) range slider field type to Advanced Custom Fields (ACF). Fully supports ACF 6+ and the block editor.
  * Version: 2.0.0
  * Author: Andrei Balaianu
+ * Author URI: https://github.com/balaianu
+ * Plugin URI: https://github.com/balaianu/acf-double-range
+ * License: GPLv2 or later
  * Text Domain: acf-double-range
  */
+
 
 if (!defined('ABSPATH')) exit;
 
