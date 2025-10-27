@@ -1,0 +1,14 @@
+name: Bug Report
+description: File a bug report for ACF Double Range Field
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "### Describe the bug"
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Description
+      description: What happened?
+      placeholder: A clear and concise description of the issue.
