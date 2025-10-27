@@ -1,0 +1,139 @@
+/* =========================================
+   ACF Double Range Field – Perfect Sidebar Balance
+   ========================================= */
+
+.acf-double-range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* Numeric inputs */
+.acf-double-range input[type="number"] {
+  flex: 0 0 100px;
+  min-width: 80px;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  height: 32px;
+  border: 1px solid #ccd0d4;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 13px;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+/* Slider */
+.acf-double-range .double-slider {
+  flex: 1;
+  min-width: 160px;
+  position: relative;
+  height: 8px;
+  margin: 4px 0;
+  padding: 0 9px;
+  background: #e1e1e1;
+  border-radius: 4px;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+/* Range bar */
+.ui-slider-range {
+  position: absolute;
+  top: 0;
+  height: 8px;
+  border-radius: 4px;
+  background: #0073aa;
+  z-index: 1;
+}
+
+/* Handles */
+.ui-slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 2px solid #0073aa;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+}
+
+.ui-slider-handle:last-of-type {
+  transform: translate(-60%, -50%);
+}
+
+/* Hover + focus */
+.ui-slider-handle:hover,
+.ui-slider-handle:focus {
+  border-color: #005177;
+  box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.25);
+  outline: none;
+}
+
+/* Drag state */
+.ui-slider-handle:active {
+  border-color: #004466;
+  box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.35);
+}
+
+/* Disable text selection while dragging */
+.ui-slider,
+.ui-slider-handle {
+  user-select: none;
+}
+
+/* High contrast */
+@media (prefers-contrast: more) {
+  .ui-slider-range {
+    background: #005177;
+  }
+  .ui-slider-handle {
+    border-color: #004466;
+  }
+}
+
+/* -----------------------------------------
+   Sidebar / Narrow Layout Fix
+   ----------------------------------------- */
+@media (max-width: 600px),
+.editor-styles-wrapper .acf-block-fields .acf-double-range {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Inputs go full width */
+@media (max-width: 600px),
+.editor-styles-wrapper .acf-block-fields .acf-double-range input[type="number"] {
+  width: 100%;
+  flex: none;
+}
+
+/* Slider centered visually */
+@media (max-width: 600px),
+.editor-styles-wrapper .acf-block-fields .acf-double-range .double-slider {
+  order: 2; /* place slider last */
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* Add extra spacing for balance */
+.editor-styles-wrapper .acf-block-fields .acf-double-range input[type="number"]:first-of-type {
+  margin-bottom: 4px;
+}
+.editor-styles-wrapper .acf-block-fields .acf-double-range input[type="number"]:last-of-type {
+  margin-top: 4px;
+}
