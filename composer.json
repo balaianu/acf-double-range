@@ -1,6 +1,6 @@
 {
   "name": "balaianu/acf-double-range",
-  "description": "A double (min–max) range slider field type for Advanced Custom Fields.",
+  "description": "A professional double (min–max) range slider field type for Advanced Custom Fields.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "authors": [
@@ -9,13 +9,12 @@
       "homepage": "https://github.com/balaianu"
     }
   ],
+  "support": {
+    "issues": "https://github.com/balaianu/acf-double-range/issues",
+    "source": "https://github.com/balaianu/acf-double-range"
+  },
   "require": {
     "php": ">=7.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "AcfDoubleRange\\": "src/"
-    }
   },
   "extra": {
     "installer-name": "acf-double-range"
