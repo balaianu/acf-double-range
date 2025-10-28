@@ -13,6 +13,11 @@
 
 if (!defined('ABSPATH')) exit;
 
+if (defined('ACF_DOUBLE_RANGE_LOADED')) {
+    return;
+}
+define('ACF_DOUBLE_RANGE_LOADED', true);
+
 define('ACF_DR_VERSION', '2.0.0');
 define('ACF_DR_URL', plugin_dir_url(__FILE__));
 define('ACF_DR_PATH', plugin_dir_path(__FILE__));
